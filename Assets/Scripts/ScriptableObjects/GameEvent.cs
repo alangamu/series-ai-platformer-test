@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Assets.Scripts.ScriptableObjects
+namespace AlbertoGarrido.Platformer.ScriptableObjects
 {
     [CreateAssetMenu]
     public class GameEvent : ScriptableObject
