@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AlbertoGarrido.Platformer.ScriptableObjects
+namespace AlbertoGarrido.Platformer.ScriptableObjects.Events
 {
     [CreateAssetMenu(menuName = "Events/AudioClip GameEvent")]
     public class AudioClipGameEvent : ScriptableObject

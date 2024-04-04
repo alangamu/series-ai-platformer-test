@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AlbertoGarrido.Platformer.ScriptableObjects
+namespace AlbertoGarrido.Platformer.ScriptableObjects.Variables
 {
     public class BaseVariable<T> : ScriptableObject
     {

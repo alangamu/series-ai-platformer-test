@@ -306,8 +306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2738f47baf8c75d4bbe767f4bf2cff86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damageToPlayerEvent: {fileID: 11400000, guid: 5e529467d03b2ec4cad5f7cec0b020e7, type: 2}
+  _damageToPlayer: 20
   _playSoundFxGameEvent: {fileID: 11400000, guid: f2387e9a62605354f9fc5df8662727ec, type: 2}
-  pushForce: 1
+  _pushForce: 2
   _damageSound: {fileID: 8300000, guid: 334fe7276f7bb134eb1b7f4064a87ed2, type: 3}
 --- !u!114 &3497866385392605165
 MonoBehaviour:

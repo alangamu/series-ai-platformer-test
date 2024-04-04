@@ -1,5 +1,5 @@
 ﻿using AlbertoGarrido.Platformer.Intefaces;
-using AlbertoGarrido.Platformer.ScriptableObjects;
+using AlbertoGarrido.Platformer.ScriptableObjects.Events;
 using UnityEngine;
 
 namespace AlbertoGarrido.Platformer

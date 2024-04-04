@@ -1,4 +1,5 @@
-﻿using AlbertoGarrido.Platformer.ScriptableObjects;
+﻿using AlbertoGarrido.Platformer.ScriptableObjects.Variables;
+using AlbertoGarrido.Platformer.ScriptableObjects.Events;
 using UnityEngine;
 
 namespace AlbertoGarrido.Platformer.Player

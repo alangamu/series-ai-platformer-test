@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0e528784de3d441a636ede90b57560, type: 3}
-  m_Name: PerformLightJumpEvent
+  m_Script: {fileID: 11500000, guid: ce75afe6d93614c4f8b70d968fc05838, type: 3}
+  m_Name: PlaySoundFxEvent
   m_EditorClassIdentifier: 

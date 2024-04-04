@@ -1,19 +1,44 @@
-﻿using System.Collections;
+﻿using AlbertoGarrido.Platformer.ScriptableObjects.Events;
 using UnityEngine;
 
 namespace AlbertoGarrido.Platformer
 {
     public class GameManager : MonoBehaviour
     {
-        // Define properties like score, playerLives, etc here
+        [SerializeField]
+        private Transform _startingPoint;
+        [SerializeField]
+        private GameEvent _initializeEvent;
+        [SerializeField]
+        private Transform _playerTransform;
+        [SerializeField]
+        private GameEvent _playerDeathEvent;
 
-        void Start()
+        private void Start()
         {
-            // Initialize state
+            _initializeEvent.Raise();
         }
-        void Update()
+
+        private void OnEnable()
         {
-            // Update game state
+            _initializeEvent.OnRaise += Initialize;
+            _playerDeathEvent.OnRaise += PlayerDeath;
+        }
+
+        private void OnDisable()
+        {
+            _initializeEvent.OnRaise -= Initialize;
+            _playerDeathEvent.OnRaise -= PlayerDeath;
+        }
+
+        private void PlayerDeath()
+        {
+            _initializeEvent.Raise();
+        }
+
+        private void Initialize()
+        {
+            _playerTransform.position = _startingPoint.position;
         }
     }
 }
