@@ -111,9 +111,11 @@ GameObject:
   - component: {fileID: 8383341609327511217}
   - component: {fileID: 2999638131655148331}
   - component: {fileID: 2665149947738741665}
+  - component: {fileID: 3497866385392605165}
+  - component: {fileID: 7115720487014767783}
   m_Layer: 0
   m_Name: Blob
-  m_TagString: Untagged
+  m_TagString: Enemy Kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,10 +216,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.045894146, y: 1.0558603}
+  m_Offset: {x: -0.045894146, y: 0.95464206}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -228,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8552294, y: 2.1117206}
+  m_Size: {x: 2.8552294, y: 1.9092841}
   m_EdgeRadius: 0
 --- !u!50 &819523175003116623
 Rigidbody2D:
@@ -287,7 +289,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8993926284309332813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c0ffe61634b2a646aad0462fd67c9cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fe43ca373f11c0448e7c6116cbcecd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 8383341609327511217}
@@ -301,7 +303,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8993926284309332813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ffbba854c9591442a65b352f06681b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2738f47baf8c75d4bbe767f4bf2cff86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playSoundFxGameEvent: {fileID: 11400000, guid: f2387e9a62605354f9fc5df8662727ec, type: 2}
+  pushForce: 1
+  _damageSound: {fileID: 8300000, guid: 334fe7276f7bb134eb1b7f4064a87ed2, type: 3}
+--- !u!114 &3497866385392605165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993926284309332813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d73c9d362ca44790ad3875b3fdcbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 819523175003116623}
@@ -309,3 +326,19 @@ MonoBehaviour:
   _pointB: {fileID: 6176626511930459477}
   _speed: 2
   _isFacingRight: 0
+--- !u!114 &7115720487014767783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993926284309332813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089582eb2afea1942a2c51d5fdf33d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playSoundFxGameEvent: {fileID: 11400000, guid: f2387e9a62605354f9fc5df8662727ec, type: 2}
+  _deathSound: {fileID: 8300000, guid: b3069b753ef879a4aa3d2f1c461ec7c6, type: 3}
+  _deathFxPrefab: {fileID: 100000, guid: c21fa5c8d62418e46a77aa4851a73263, type: 3}
+  _spriteRenderer: {fileID: 1720324489301950303}
