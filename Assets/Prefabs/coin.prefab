@@ -157,3 +157,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onCollectAudioEvent: {fileID: 11400000, guid: f2387e9a62605354f9fc5df8662727ec, type: 2}
   _collectSound: {fileID: 8300000, guid: 098f6bbff8f61c74b8de7718c36d9d32, type: 3}
+  _addPointsToScoreEvent: {fileID: 11400000, guid: 988203578da826243981ea187e96e956, type: 2}
+  _pointsAtCollect: 10

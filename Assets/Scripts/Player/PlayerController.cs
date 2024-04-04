@@ -1,7 +1,5 @@
-﻿using AlbertoGarrido.Platformer.ScriptableObjects;
-using AlbertoGarrido.Platformer.ScriptableObjects.Events;
+﻿using AlbertoGarrido.Platformer.ScriptableObjects.Events;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace AlbertoGarrido.Platformer.Player
 {

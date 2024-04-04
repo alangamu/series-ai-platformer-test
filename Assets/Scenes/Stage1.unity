@@ -2915,6 +2915,7 @@ GameObject:
   - component: {fileID: 1186760187}
   - component: {fileID: 1186760186}
   - component: {fileID: 1186760185}
+  - component: {fileID: 1186760188}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2953,6 +2954,7 @@ MonoBehaviour:
   _initializeEvent: {fileID: 11400000, guid: a3ef00bca6f449440aa44968432cd9be, type: 2}
   _playerTransform: {fileID: 330492002}
   _playerDeathEvent: {fileID: 11400000, guid: 60eb312d14ff45441a5b040a64e02711, type: 2}
+  _resetScoreEvent: {fileID: 11400000, guid: 11c1ea3e66df9b44f8b1309c4d5e3a68, type: 2}
 --- !u!4 &1186760187
 Transform:
   m_ObjectHideFlags: 0
@@ -2969,6 +2971,21 @@ Transform:
   - {fileID: 101534703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1186760188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186760184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22896cb3a3be54345a522a77487fee19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resetScoreEvent: {fileID: 11400000, guid: 11c1ea3e66df9b44f8b1309c4d5e3a68, type: 2}
+  _addPointsToScoreEvent: {fileID: 11400000, guid: 988203578da826243981ea187e96e956, type: 2}
+  _scoreText: {fileID: 1124832721}
 --- !u!4 &1200317684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1537141799095742175, guid: 788a88074ef062f4196b17d93ef8501f, type: 3}
@@ -3617,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 810e68ad0ec0e054eafd8e85708ced79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.7074614
+      value: 5.93
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 810e68ad0ec0e054eafd8e85708ced79, type: 3}
       propertyPath: m_LocalPosition.y

@@ -13,6 +13,8 @@ namespace AlbertoGarrido.Platformer
         private Transform _playerTransform;
         [SerializeField]
         private GameEvent _playerDeathEvent;
+        [SerializeField]
+        private GameEvent _resetScoreEvent;
 
         private void Start()
         {
@@ -39,6 +41,7 @@ namespace AlbertoGarrido.Platformer
         private void Initialize()
         {
             _playerTransform.position = _startingPoint.position;
+            _resetScoreEvent.Raise();
         }
     }
 }
