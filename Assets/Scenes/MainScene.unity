@@ -1178,6 +1178,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1537141799095742175, guid: 788a88074ef062f4196b17d93ef8501f, type: 3}
   m_PrefabInstance: {fileID: 168213513}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &187658311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187658312}
+  - component: {fileID: 187658314}
+  - component: {fileID: 187658313}
+  m_Layer: 0
+  m_Name: Player Killer (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &187658312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187658311}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.05, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2035345479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187658313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187658311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c64d5c00591a3478d3fc37bdadeed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeathEvent: {fileID: 11400000, guid: 60eb312d14ff45441a5b040a64e02711, type: 2}
+--- !u!61 &187658314
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187658311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.052480698, y: -0.4548235}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 24.895718, y: 1.069973}
+  m_EdgeRadius: 0
 --- !u!4 &190927050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 69fef543a04a8bc459c66f40e50a7c5e, type: 3}
@@ -3354,7 +3445,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press the Space Bar twice to reach higer platforms
+  m_Text: 'A, left arrow = move left
+
+    D, right arrow = move right
+
+    Space,
+    W = jump
+
+    Press the Space Bar twice to reach higer platforms'
 --- !u!222 &529684463
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7077,6 +7175,7 @@ MonoBehaviour:
   _resetScoreEvent: {fileID: 11400000, guid: 11c1ea3e66df9b44f8b1309c4d5e3a68, type: 2}
   _gameOverEvent: {fileID: 11400000, guid: 173c7556012af474c84001494efbb3d5, type: 2}
   _gameOverPanelTransform: {fileID: 1007627058}
+  _playerInput: {fileID: 330492000}
 --- !u!4 &1186760187
 Transform:
   m_ObjectHideFlags: 0
@@ -10461,7 +10560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2035345479
 Transform:
   m_ObjectHideFlags: 0
@@ -10482,6 +10581,7 @@ Transform:
   - {fileID: 1591922017}
   - {fileID: 106442520}
   - {fileID: 52513594}
+  - {fileID: 187658312}
   - {fileID: 339386226}
   m_Father: {fileID: 463791392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

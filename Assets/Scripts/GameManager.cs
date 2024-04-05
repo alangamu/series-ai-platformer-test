@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace AlbertoGarrido.Platformer
 {
@@ -21,6 +22,8 @@ namespace AlbertoGarrido.Platformer
         private GameEvent _gameOverEvent;
         [SerializeField]
         private Transform _gameOverPanelTransform;
+        [SerializeField]
+        private PlayerInput _playerInput;
 
         private void OnEnable()
         {
@@ -40,18 +43,20 @@ namespace AlbertoGarrido.Platformer
         private void GameOver()
         {
             _gameOverPanelTransform.gameObject.SetActive(true);
+            _playerInput.enabled = false;
         }
 
         private async void PlayerDeath()
         {
+            _playerInput.enabled = false;
             await Task.Delay(TimeSpan.FromSeconds(1));
+            _playerInput.enabled = true;
             _initializeEvent.Raise();
         }
 
         private void Initialize()
         {
             _playerTransform.position = _startingPoint.position;
-            //_resetScoreEvent.Raise();
         }
     }
 }
