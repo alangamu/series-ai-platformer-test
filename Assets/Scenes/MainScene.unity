@@ -1845,7 +1845,6 @@ GameObject:
   - component: {fileID: 330492004}
   - component: {fileID: 330492003}
   - component: {fileID: 330492007}
-  - component: {fileID: 330492008}
   - component: {fileID: 330492009}
   - component: {fileID: 330492010}
   m_Layer: 0
@@ -2184,19 +2183,6 @@ MonoBehaviour:
   _animator: {fileID: 330492004}
   _performJumpEvent: {fileID: 11400000, guid: d4c7fe449088dd2419c514350fcfbef8, type: 2}
   _isWallSlidingVariable: {fileID: 11400000, guid: 5d90bf3818231a641abf14542b81df99, type: 2}
---- !u!114 &330492008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330491997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a666efdc15decc44795194afb376dbed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerDeathEvent: {fileID: 11400000, guid: 60eb312d14ff45441a5b040a64e02711, type: 2}
 --- !u!114 &330492009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6704,7 +6690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -30, y: -35.3}
+  m_AnchoredPosition: {x: -30, y: -35.30005}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1124832721
@@ -10926,7 +10912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 146.3, y: -18.3}
+  m_AnchoredPosition: {x: 146.30005, y: -18.300049}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!4 &2137930320 stripped

@@ -1,16 +1,13 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AlbertoGarrido.Platformer.ScriptableObjects.Events
 {
+    /// <summary>
+    /// Game event specifically for passing around AudioClips.
+    /// </summary>
     [CreateAssetMenu(menuName = "Events/AudioClip GameEvent")]
-    public class AudioClipGameEvent : ScriptableObject
+    public class AudioClipGameEvent : BaseGameEvent<AudioClip>
     {
-        public event Action<AudioClip> OnRaise;
 
-        public virtual void Raise(AudioClip audioClip)
-        {
-            OnRaise?.Invoke(audioClip);
-        }
     }
 }

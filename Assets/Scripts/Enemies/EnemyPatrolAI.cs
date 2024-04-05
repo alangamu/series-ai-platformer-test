@@ -51,7 +51,9 @@ namespace AlbertoGarrido.Platformer
             }
         }
 
-        // Method to flip the direction of the enemy visuals 
+        /// <summary>
+        /// Method to flip the direction of the enemy visuals 
+        /// </summary>
         private void Flip()
         {
             _isFacingRight = !_isFacingRight; // Toggle the facing direction flag
