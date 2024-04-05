@@ -346,3 +346,4 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 1720324489301950303}
   _addPointsToScoreEvent: {fileID: 11400000, guid: 988203578da826243981ea187e96e956, type: 2}
   _pointsAtDeath: 25
+  _enemyCollider: {fileID: 3779215055526631027}

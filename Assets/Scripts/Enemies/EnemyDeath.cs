@@ -18,9 +18,12 @@ namespace AlbertoGarrido.Platformer.Enemies
         private IntGameEvent _addPointsToScoreEvent;
         [SerializeField]
         private int _pointsAtDeath;
+        [SerializeField]
+        private BoxCollider2D _enemyCollider;
 
         public void Death()
         {
+            _enemyCollider.enabled = false;
             _playSoundFxGameEvent.Raise(_deathSound);
             GameObject deathFxPrefab = Instantiate(_deathFxPrefab, transform);
             _spriteRenderer.enabled = false;

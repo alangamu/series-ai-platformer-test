@@ -14,7 +14,6 @@ namespace AlbertoGarrido.Platformer.Player
             if (collision.gameObject.CompareTag("Enemy Kill"))
             {
                 _resetJumpsEvent.Raise();
-                //TODO: maje a small jump to emulate bouncing
                 if (collision.gameObject.TryGetComponent(out IDeath enemyDeath))
                 {
                     enemyDeath.Death();

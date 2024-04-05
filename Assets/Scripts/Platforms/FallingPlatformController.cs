@@ -48,7 +48,7 @@ namespace AlbertoGarrido.Platformer.Platforms
             _rb.bodyType = RigidbodyType2D.Static;
         }
 
-        private void Start()
+        private void Awake()
         {
             _startingPosition = transform.position;
             // Get the Rigidbody component attached to the platform
