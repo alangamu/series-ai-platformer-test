@@ -35,7 +35,6 @@ namespace AlbertoGarrido.Platformer
 
         private void AddPointsToScore(int pointsToAdd)
         {
-            Debug.Log($"add {pointsToAdd} points");
             _score += pointsToAdd;
             _scoreText.text = _score.ToString();
         }
