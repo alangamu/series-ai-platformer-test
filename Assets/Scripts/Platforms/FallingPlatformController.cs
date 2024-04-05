@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlbertoGarrido.Platformer.ScriptableObjects.Events;
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -13,17 +14,43 @@ namespace AlbertoGarrido.Platformer.Platforms
         [SerializeField]
         private float _fallWait = 1f;
 
-        // Time to wait before destroying the platform after it falls
         [SerializeField]
-        private float _destroyWait = 1f;
+        private float _vanishWait = 1f;
+
+        [SerializeField]
+        private SpriteRenderer _visuals;
+
+        [SerializeField]
+        private GameEvent _initializeEvent;
 
         // Flag to track if the platform is currently falling
         private bool _isFalling;
         // Rigidbody component of the platform
         private Rigidbody2D _rb;
 
+        private Vector2 _startingPosition;
+
+        private void OnEnable()
+        {
+            _initializeEvent.OnRaise += Initialize;
+        }
+
+        private void OnDisable()
+        {
+            _initializeEvent.OnRaise -= Initialize;
+        }
+
+        private void Initialize()
+        {
+            transform.position = _startingPosition;
+            _visuals.enabled = true;
+            _isFalling = false;
+            _rb.bodyType = RigidbodyType2D.Static;
+        }
+
         private void Start()
         {
+            _startingPosition = transform.position;
             // Get the Rigidbody component attached to the platform
             _rb = GetComponent<Rigidbody2D>();
         }
@@ -50,8 +77,8 @@ namespace AlbertoGarrido.Platformer.Platforms
             await Task.Delay(TimeSpan.FromSeconds(_fallWait));
             // Change the Rigidbody type to make the platform fall
             _rb.bodyType = RigidbodyType2D.Dynamic;
-            // Destroy the platform after the specified time
-            Destroy(gameObject, _destroyWait);
+            await Task.Delay(TimeSpan.FromSeconds(_vanishWait)); 
+            _visuals.enabled = false;
         }
     }
 }

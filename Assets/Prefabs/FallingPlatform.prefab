@@ -171,5 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2a568ebf922c840a13f58e3b858096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fallWait: 1
-  _destroyWait: 1
+  _fallWait: 0.5
+  _vanishWait: 1
+  _visuals: {fileID: 1447919661762635446}
+  _initializeEvent: {fileID: 11400000, guid: a3ef00bca6f449440aa44968432cd9be, type: 2}
